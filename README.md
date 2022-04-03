@@ -26,8 +26,11 @@ WHEN I refresh the page
 
 THEN the saved events persist
 
+---
 #Mockup Image
 The website mockup image is located at:
+
+---
 
 #Sample Site
 The sample site for workdaytracker is located at :
