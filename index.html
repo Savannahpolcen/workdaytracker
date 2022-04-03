@@ -7,11 +7,12 @@
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link
+      <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"/>
+      crossorigin="anonymous"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"/>
@@ -34,11 +35,12 @@
             9AM
           </div>
           <textarea class="col-md-10 description">
-          </textarea>
+             </textarea>
           <button class="btn saveBtn col-md-1">
             <i id="save" class="fas fa-save"></i>
+
           </button>
-        </li>
+          </li>
         <li class="row time-block" name=10>
           <div class="col-md-1 hour">
             10AM
@@ -51,8 +53,7 @@
         </li>
         <li class="row time-block" name=11>
           <div class="col-md-1 hour">
-            11AM
-          </div>
+            11AM </div>
           <textarea class="col-md-10 description">
           </textarea>
           <button class="btn saveBtn col-md-1">
@@ -69,6 +70,7 @@
             <i id="save" class="fas fa-save"></i>
           </button>
         </li>
+
         <li class="row time-block" name="13">
           <div class="col-md-1 hour">
             1PM
@@ -93,6 +95,7 @@
           <div class="col-md-1 hour">
             3PM
           </div>
+
           <textarea class="col-md-10 description">
           </textarea>
           <button class="btn saveBtn col-md-1">
@@ -113,6 +116,7 @@
           <div class="col-md-1 hour">
             5PM
           </div>
+
           <textarea class="col-md-10 description">
           </textarea>
           <button class="btn saveBtn col-md-1">
@@ -126,5 +130,44 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type="text/javascript">
+         var currentDate = new Date();
+     
+      var correctDate = moment(currentDate).format('dddd, MMMM Do')
+      currentDayEL = document.getElementById("currentDay").innerHTML = (correctDate);
+      
+      var hourFinder = moment(currentDate).format("HH");
+      
+
+      $('.time-block').each(function(){
+        var blockHour = $(this).attr("name");
+        var previousText = JSON.parse(localStorage.getItem(blockHour));
+        console.log(previousText);
+        $(this).children(".description").append(previousText).val().trim();
+    
+        if ($(this).attr("name") < hourFinder){
+          $(this).removeClass("future");
+          $(this).removeClass("present");
+          $(this).addClass("past");
+        }
+        else if ($(this).attr("name") === hourFinder){
+          $(this).removeClass("past");
+          $(this).removeClass("future");
+          $(this).addClass("present");
+        }
+        else {
+          $(this).removeClass("present");
+          $(this).removeClass("past");
+          $(this).addClass("future");
+        }
+      })
+
+      $(document).on('click', '#save', function() {
+        var saveData = $(this).parent().siblings(".description").val().trim();
+        localStorage.setItem(($(this).parent().parent().attr("name")), JSON.stringify(saveData))
+        console.log(saveData);
+      })
+
+    </script>
   </body>
 </html>
