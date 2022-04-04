@@ -130,7 +130,9 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script type="text/javascript">
+   
+   
+   <script type="text/javascript">
          var currentDate = new Date();
      
       var correctDate = moment(currentDate).format('dddd, MMMM Do')
@@ -151,7 +153,7 @@
           $(this).addClass("past");
         }
         else if ($(this).attr("name") === hourFinder){
-          $(this).removeClass("past");
+             $(this).removeClass("past");
           $(this).removeClass("future");
           $(this).addClass("present");
         }

@@ -30,6 +30,8 @@ THEN the saved events persist
 #Mockup Image
 The website mockup image is located at:
 
+
+
 ---
 
 #Sample Site
