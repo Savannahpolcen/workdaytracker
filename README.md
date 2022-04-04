@@ -28,7 +28,8 @@ THEN the saved events persist
 
 ---
 #Mockup Image
-The website mockup image is located at:
+
+![mockupworkdaytracker](https://user-images.githubusercontent.com/29647525/161611812-8bf35e9d-17e9-4ec6-a8a1-1b88803bed68.jpg)
 
 
 
