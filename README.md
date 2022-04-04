@@ -41,5 +41,6 @@ The sample site for workdaytracker is located at :
 #GitHub Repository
 The name of the workdaytracker GitHub repository is "workdaytracker" at the URL of "".
 
+https://github.com/Savannahpolcen/workdaytracker
 ---
 Savannah Polcen 
