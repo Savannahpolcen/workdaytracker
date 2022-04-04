@@ -31,12 +31,12 @@ THEN the saved events persist
 
 ![mockupworkdaytracker](https://user-images.githubusercontent.com/29647525/161611812-8bf35e9d-17e9-4ec6-a8a1-1b88803bed68.jpg)
 
-
-
 ---
 
 #Sample Site
 The sample site for workdaytracker is located at :
+
+https://savannahpolcen.github.io/workdaytracker/
 
 #GitHub Repository
 The name of the workdaytracker GitHub repository is "workdaytracker" at the URL of "".
